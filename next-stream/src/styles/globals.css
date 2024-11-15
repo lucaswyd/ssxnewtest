@@ -1,0 +1,10 @@
+/* src/styles/globals.css */
+
+body {
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set a default font */
+}
+
+* {
+    box-sizing: border-box; /* Add box-sizing for better sizing control */
+}

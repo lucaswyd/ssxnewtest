@@ -1,0 +1,110 @@
+/* src/app/page.module.css */
+.container {
+    padding: 20px;
+}
+
+.matchGrid {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding-bottom: 10px; /* Optional: space at the bottom */
+    gap: 15px; /* Increase space between boxes */
+    position: relative; /* Create a positioning context for scroll buttons */
+    white-space: nowrap; /* Prevent wrapping to the next line */
+}
+
+.matchBox {
+    background: #212121;
+    border-radius: 12px; /* Adjustment to border radius */
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 300px; /* Set minimum width for the match boxes */
+    max-width: 300px; /* Set a maximum width for boxes */
+    flex: none; /* Prevent the boxes from shrinking */
+}
+
+.poster {
+    position: relative;
+    height: 150px; /* Height of the poster */
+}
+
+.posterImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom-left-radius: 12px; /* Adjust radius */
+    border-bottom-right-radius: 12px; /* Adjust radius */
+}
+
+.dateTime {
+    position: absolute;
+    top: 10px; /* Adjust placement for visual balance */
+    right: 10px; /* Adjust placement */
+    background: rgba(33, 33, 33, 0.8); /* Slightly opaque background */
+    padding: 5px 10px; /* Adjust padding for better appearance */
+    border-radius: 5px;
+    font-size: 16px; /* Increase font size for better visibility */
+    opacity: 90%;
+}
+
+.teamNames {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align team names */
+    padding: 10px; /* Padding for the team names */
+    height: 70px; /* Fixed height */
+}
+
+.awayTeam, .homeTeam {
+    font-size: 18px; /* Increased font size for team names */
+    font-weight: bold;
+    margin: 0px 0; /* Remove vertical spacing */
+}
+
+.matchTitle {
+    font-size: 16px; /* Slightly larger for better visibility */
+    font-weight: bold;
+    padding: 8px; /* Adjust padding */
+    text-align: center; /* Center align the title */
+    color: #ffffff; /* Change color for visibility */
+}
+
+.scrollButton {
+    background-color: #0070f3; /* Example button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px; /* Adjust height */
+    width: 30px; /* Adjust width */
+    cursor: pointer;
+    margin-left: 5px; /* Space between title and buttons */
+    font-size: 18px; /* Adjust font size */
+    vertical-align: middle; /* Center align the buttons vertically */
+}
+
+/* Enable scrollbars */
+.matchGrid::-webkit-scrollbar {
+    height: 8px; /* Adjust height of the scrollbar */
+}
+
+.matchGrid::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5); /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Round the corners of the scrollbar thumb */
+}
+
+.matchGrid::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2); /* Color of the scrollbar track */
+}
+
+/* Firefox scrollbar settings */
+.matchGrid {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.2); /* Thumb and track color for Firefox */
+}
+
+/* Add this new CSS rule */
+.categoryTitle {
+    font-family: 'Inter-Bold', sans-serif; /* Replace with your desired font */
+    font-size: 24px; /* Desired font size */
+    font-weight: bold; /* Optional */
+    margin-bottom: 10px; /* Optional */
+}

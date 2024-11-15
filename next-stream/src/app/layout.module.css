@@ -1,0 +1,198 @@
+/* Layout styles for header and search functionalities */
+
+/* Header styles */
+.mainPadding {
+    padding-top: 50px; /* Ensure main content is below the fixed header */
+}
+
+.header {
+    font-family: 'Inter-Medium', sans-serif; /* Desired font */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items */
+    background: #0c0c0c; /* Transparent dark background */
+    backdrop-filter: blur(10px); /* Blur effect behind the header */
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    width: 100%; /* Full width */
+    padding: 10px 20px; /* Add some padding */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Left container styles */
+.leftContainer {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+/* Logo styles */
+.logo {
+    max-height: 30px; /* Adjust logo size */
+}
+
+/* Schedule button styles */
+.scheduleButton {
+    background: none; /* Transparent background */
+    color: #999999; /* Text color for schedule */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: 15px; /* Spacing from the logo */
+    font-size: inherit; /* Inherit font size */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.scheduleButton:hover {
+    color: #c2c2c2; /* Change the color on hover */
+}
+
+/* Center container styles */
+.centerContainer {
+    flex-grow: 1; /* Allow it to take available space */
+    display: flex;
+    justify-content: center; /* Center the search area */
+}
+
+/* Search input button styles */
+.searchInput {
+    background-color: #0c0c0c; /* Background color to match header */
+    color: #999999; /* Text color for the search text */
+    border: 1px solid #262626; /* Border color to match text */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Internal padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    height: 50px; /* Button height */
+    width: 300px; /* Set the width for the search button */
+    text-align: left; /* Align text to the left */
+}
+
+.searchInput:hover {
+    background-color: #1a1a1a; /* Darker on hover */
+}
+
+/* Button styles */
+.button {
+    background-color: #0c0c0c; /* Button background */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside buttons */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.button:hover {
+    background-color: #1a1a1a; /* Darker on hover */
+}
+
+/* Menu button styles */
+.menuButton {
+    background: none;
+    border: none;
+    cursor: pointer; /* Hand cursor on hover */
+    color: white; /* Ensuring the icon is visible */
+}
+
+/* Sign out button styles */
+.signOutButton {
+    background-color: transparent; /* Transparent background */
+    color: white; /* Sign out button text color */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 10px; /* Spacing above button */
+    text-align: left; /* Align button text to the left */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.signOutButton:hover {
+    color: #c2c2c2; /* Change the color on hover */
+}
+
+/* Search overlay styles */
+.searchOverlay {
+    position: fixed; /* Ensure the overlay is fixed */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    bottom: 0; /* Align to bottom */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Search container styles */
+.searchContainer {
+    background: #100c0c; /* Search box background color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the search box */
+    width: 400px; /* Fixed width */
+    position: relative; /* Position relative for absolute children */
+    text-align: center; /* Center text */
+    z-index: 1001; /* Ensure this is above the overlay effect */
+}
+
+/* Close button styles */
+.closeButton {
+    position: absolute; /* Position it in the top-right corner */
+    top: 10px;
+    right: 10px;
+    background: none; /* Transparent background */
+    border: none; /* No border */
+    font-size: 20px; /* Increase font size */
+    cursor: pointer; /* Hand cursor on hover */
+}
+
+/* Input field styles for overlay */
+.overlayInput {
+    width: 100%; /* Full width for the overlay input */
+    padding: 8px; /* Internal padding */
+    margin: 10px 0; /* Spacing above and below */
+    border: 1px solid #999999; /* Border color to match the text field */
+    border-radius: 4px; /* Rounded corners */
+    background: #100c0c; /* Same as container background */
+    color: white; /* Text color */
+}
+
+/* Search results styles */
+.searchResults {
+    margin-top: 20px; /* Space above results */
+    max-height: 200px; /* Limit height */
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+.matchLink {
+    display: block; /* Make links block elements */
+    padding: 8px; /* Internal padding */
+    color: white; /* Set text color to white */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.2s; /* Smooth transition */
+}
+
+.matchLink:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+}
+
+.menu {
+    position: absolute;
+    right: 20px;
+    top: 60px; /* Adjust based on your header height */
+    background-color: #212121;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}

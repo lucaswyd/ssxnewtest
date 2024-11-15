@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "source": "next-stream",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "us-central1"
+    }
+  }
+}
